@@ -1,11 +1,13 @@
 package Ejercicio11;
 
 import java.time.LocalDate;
-import java.util.LinkedHashMap;
+import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
-        LocalDate localDate=LocalDate.now();
-        System.out.println("Hoy es " + localDate);
+        Supplier<LocalDate>localDateSupplier=()->{
+          return LocalDate.now();
+        };
+        System.out.println("Hoy estamos a " +localDateSupplier.get());
     }
 }
