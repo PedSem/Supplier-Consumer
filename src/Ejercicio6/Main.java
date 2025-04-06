@@ -6,11 +6,14 @@ import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
-        Map<String,String>mapa=new HashMap<>();
-        mapa.put("1","2");
-        Supplier<String>crearMapa=()->{
-            return mapa.get("1");
+        Supplier<Map<String,String>>crearMapa=()->{
+            Map<String,String>mapa=new HashMap<>();
+            mapa.put("clave1", "valor1");
+            mapa.put("clave2", "valor2");
+            mapa.put("clave3", "valor3");
+            return mapa;
         };
-        System.out.println(crearMapa.get());
+        Map<String,String>mimapa=crearMapa.get();
+        mimapa.forEach((clave,valor)-> System.out.println(clave + "->" + valor));
     }
 }
