@@ -15,6 +15,7 @@ public class Main {
          integerStringMap.put(5,"Moto");
          integerStringMap.forEach(integerStringBiConsumer);
 
+
     }
 
 }
