@@ -7,6 +7,7 @@ public class Main {
         Supplier<Programador>programadorSupplier=()->{
           return new Programador("Pedro",1200,new Date());
         };
+
         System.out.println(programadorSupplier.get());
     }
 }
