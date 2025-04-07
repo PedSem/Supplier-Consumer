@@ -1,9 +1,6 @@
 package Ejercicio14;
 
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.BiConsumer;
 import java.util.function.Supplier;
 
 public class Main {

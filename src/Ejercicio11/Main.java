@@ -5,9 +5,7 @@ import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
-        Supplier<LocalDate>localDateSupplier=()->{
-          return LocalDate.now();
-        };
+        Supplier<LocalDate>localDateSupplier=LocalDate::now;
         System.out.println("Hoy estamos a " +localDateSupplier.get());
     }
 }
