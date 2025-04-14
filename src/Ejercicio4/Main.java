@@ -1,6 +1,7 @@
 package Ejercicio4;
 
 import java.util.Random;
+import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class Main {
@@ -9,6 +10,7 @@ public class Main {
         Supplier<String> stringSupplier=()->{
           return "java es una clase de programacion";
         };
-        System.out.println(stringSupplier.get());
+        Consumer<String>consumer=a-> System.out.println(a);
+        consumer.accept(stringSupplier.get());
     }
 }

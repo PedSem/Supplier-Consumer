@@ -1,5 +1,6 @@
 package Ejercicio12;
 import java.util.Date;
+import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class Main {
@@ -7,7 +8,8 @@ public class Main {
         Supplier<Programador>programadorSupplier=()->{
           return new Programador("Pedro",1200,new Date());
         };
+        Consumer<Programador>programadorConsumer=a-> System.out.println(a);
 
-        System.out.println(programadorSupplier.get());
+        programadorConsumer.accept(programadorSupplier.get());
     }
 }

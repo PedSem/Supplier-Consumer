@@ -8,8 +8,6 @@ public class Calculator {
         calculator.Calcula(a,b,(x,y)-> System.out.println(x+y));
         calculator.Calcula(a,b,(x,y)-> System.out.println(x-y));
         calculator.Calcula(a,b,(x,y)-> System.out.println(x/y));
-
-
     }
     public void Calcula(int x,int y,BiConsumer<Integer,Integer>calculadora){
        calculadora.accept(x,y);
